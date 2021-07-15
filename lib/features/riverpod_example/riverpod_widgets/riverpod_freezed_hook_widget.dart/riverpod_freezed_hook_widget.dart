@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:state_manage/features/riverpod_example/riverpod_provider/riverpod_provider_freezed.dart';
 import 'package:state_manage/features/riverpod_example/riverpod_state/riverpod_freezed.dart';
 import 'package:state_manage/features/riverpod_example/riverpod_widgets/riverpod_not_freezed/riverpod_item_list_widget.dart';
@@ -37,8 +38,13 @@ class BodyWidget extends HookWidget {
   @override
   Widget build(BuildContext context) {
     final _scrollController = useScrollController();
+    final provider = useProvider(riverPodNotifierProviderFrezzed.notifier);
     useEffect(() {
-      _scrollController.addListener(() => _onScroll(_scrollController));
+      _scrollController.addListener(() {
+        if (_isBottom(_scrollController)) {
+          provider.fetchMore();
+        }
+      });
     });
     return Consumer(
       builder: (context, watch, child) {
@@ -87,13 +93,6 @@ class BodyWidget extends HookWidget {
         );
       },
     );
-  }
-
-  void _onScroll(ScrollController scrollController) {
-    if (_isBottom(scrollController)) {
-      final context = useContext();
-      context.read(riverPodNotifierProviderFrezzed.notifier).fetchMore();
-    }
   }
 
   bool _isBottom(ScrollController scrollController) {
