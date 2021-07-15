@@ -1,0 +1,10 @@
+include: package:lint/analysis_options.yaml
+
+linter:
+  rules:
+    sort_pub_dependencies: false
+    type_annotate_public_apis: false
+    avoid_positional_boolean_parameters: false
+analyzer:
+  strong-mode:
+    implicit-casts: true

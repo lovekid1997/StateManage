@@ -1,0 +1,53 @@
+name: state_manage
+description: A new Flutter project.
+
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  cupertino_icons: ^1.0.2
+  flutter:
+    sdk: flutter
+  #date time support
+  intl: ^0.17.0
+
+  #UI support
+  cached_network_image: ^3.0.0
+
+  #state manage
+  flutter_riverpod: ^0.14.0+3
+  hooks_riverpod: ^0.14.0+4
+  flutter_hooks: ^0.18.0
+  
+  #support material
+  get: ^4.1.4
+  stacked_services: ^0.8.10
+  page_transition: ^2.0.2
+
+  #support restclient, injectable
+  get_it: ^7.1.3
+  injectable: ^1.4.1
+  retrofit: ^2.0.0
+  dio: ^4.0.0
+
+  #frezzed
+  freezed_annotation: ^0.14.2
+
+  #equatable
+  equatable: ^2.0.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  injectable_generator: ^1.4.1
+  retrofit_generator: ^2.0.0+3
+  build_runner: ^2.0.6
+  lint: ^1.5.3
+  freezed: ^0.14.2
+
+flutter:
+  uses-material-design: true
