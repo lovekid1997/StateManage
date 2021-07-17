@@ -13,8 +13,10 @@ dependencies:
   flutter:
     sdk: flutter
   #date time support
-  intl: ^0.17.0
-
+  intl: ^0.17.0 
+  #pigeon
+  pigeon: ^0.3.0
+  
   #UI support
   cached_network_image: ^3.0.0
 

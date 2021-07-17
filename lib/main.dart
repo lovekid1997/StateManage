@@ -43,8 +43,12 @@ class MyHomePage extends StatelessWidget {
       body: Column(
         children: [
           TextButton(
-            onPressed: () => Get.toNamed('/riverpodScreen'),
+            onPressed: () => Get.toNamed(AppRoute.riverPodScreen),
             child: const Text('River pod'),
+          ),
+          TextButton(
+            onPressed: () => Get.toNamed(AppRoute.methodChannelScreen),
+            child: const Text('Channel Method'),
           ),
         ],
       ),

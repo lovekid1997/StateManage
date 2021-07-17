@@ -59,7 +59,7 @@ class RiverPodStateNotifierFrezzed extends StateNotifier<RiverPodStateFrezzed> {
     item.like = !(item.like ?? false);
     state = Loaded(listUser);
 
-    final bool isSuccess =
+    // final bool isSuccess =
         await _userRepository.putUser(dataUser: item, id: dataUser.id!);
 
     /// handle more, show dialog,.....

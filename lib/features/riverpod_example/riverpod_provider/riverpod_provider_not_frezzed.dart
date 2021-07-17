@@ -58,7 +58,7 @@ class RiverPodStateNotifier extends StateNotifier<RiverPodState> {
     item.like = !(item.like ?? false);
     state = RiverPodLoadedDataState(state.listUsers!);
 
-    final bool isSuccess =
+    // final bool isSuccess =
         await _userRepository.putUser(dataUser: item, id: dataUser.id!);
 
     /// handle more, show dialog,.....
