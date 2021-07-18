@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "142174329448",
+    "project_id": "statemanager-4075e",
+    "storage_bucket": "statemanager-4075e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:142174329448:android:52ca4080024b5f81fff9dd",
+        "android_client_info": {
+          "package_name": "com.example.state_manage"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "142174329448-unb5ishodhrmiocn7vr4vr42s1a6ok7k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.state_manage",
+            "certificate_hash": "ba8949a6108831b89195c61f388eba4f29648700"
+          }
+        },
+        {
+          "client_id": "142174329448-o7kmislufsjlr0kbu10sb5hpfrj3ujii.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArNj5yYWPSD-iduqeTgsJ14eoDLte0wT0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "142174329448-o7kmislufsjlr0kbu10sb5hpfrj3ujii.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
