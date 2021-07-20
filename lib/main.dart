@@ -24,8 +24,10 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: const MyHomePage(title: 'Demo state manage'),
-      onGenerateRoute: AppRoute.generateRoute,
+      // onGenerateRoute: AppRoute.generateRoute,
       navigatorKey: StackedService.navigatorKey,
+      getPages: AppRoute.generateRouteGet(),
+      unknownRoute: AppRoute().unknowRoute,
     );
   }
 }
@@ -49,6 +51,10 @@ class MyHomePage extends StatelessWidget {
           TextButton(
             onPressed: () => Get.toNamed(AppRoute.methodChannelScreen),
             child: const Text('Channel Method'),
+          ),
+          TextButton(
+            onPressed: () => Get.toNamed(AppRoute.getControllerScreen),
+            child: const Text('Get controller'),
           ),
         ],
       ),

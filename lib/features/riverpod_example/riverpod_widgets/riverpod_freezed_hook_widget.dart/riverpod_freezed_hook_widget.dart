@@ -6,7 +6,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:state_manage/features/riverpod_example/riverpod_provider/riverpod_provider_freezed.dart';
 import 'package:state_manage/features/riverpod_example/riverpod_state/riverpod_freezed.dart';
-import 'package:state_manage/features/riverpod_example/riverpod_widgets/riverpod_not_freezed/riverpod_item_list_widget.dart';
+import 'package:state_manage/features/widgets_common/item_list_user_common.dart';
 import 'package:state_manage/model/user/user_response.dart';
 
 class RiverPodFreezedHookWidget extends StatefulWidget {
@@ -64,7 +64,7 @@ class BodyWidget extends HookWidget {
                     child: Center(child: CircularProgressIndicator()));
               }
               final DataUser item = listUsers[index];
-              return RiverPodItemListWidget(
+              return ItemListUserCommon(
                 item: item,
                 onTap: () {
                   context

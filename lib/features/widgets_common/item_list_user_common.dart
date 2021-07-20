@@ -4,16 +4,16 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:state_manage/model/user/user_response.dart';
 
-class RiverPodItemListWidget extends StatelessWidget {
+class ItemListUserCommon extends StatelessWidget {
   final DataUser item;
   final Function onTap;
-  const RiverPodItemListWidget(
+  const ItemListUserCommon(
       {Key? key, required this.item, required this.onTap})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    log('rebuild RiverPodItemListWidget');
+    log('rebuild ItemListUserCommon');
     return ListTile(
       leading: CircleAvatar(
         backgroundImage: CachedNetworkImageProvider(item.avatar ?? ''),
