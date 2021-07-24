@@ -78,15 +78,17 @@ class SocketBloc extends Bloc<SocketEvent, SocketState> with HandleCommon {
 
   void _connectSocketIo() {
     _socketIO = io.io(
-      'http://192.168.100.4:3000',
+      'https://my-website-v.herokuapp.com',
       io.OptionBuilder()
           .disableAutoConnect()
+          .enableReconnection()
           .setTransports(['websocket']).build(),
     );
     _socketIO.connect();
 
     _socketIO.onConnect((data) => log('onConnect: $data'));
 
+    _socketIO.onConnectTimeout((data) => log('time out socket'));
     _joinRoom();
     _alertUserJoinRoom();
     _listenMessage();

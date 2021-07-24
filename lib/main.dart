@@ -64,6 +64,10 @@ class MyHomePage extends StatelessWidget {
             onPressed: () => Get.toNamed(AppRoute.socketIoScreen),
             child: const Text('Socket io example'),
           ),
+          TextButton(
+            onPressed: () => Get.toNamed(AppRoute.anchorWidgetExapleScreen),
+            child: const Text('Anchor Widget Example'),
+          ),
         ],
       ),
     );

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:state_manage/features/anchor_widget_example/anchor_widget_example.dart';
 import 'package:state_manage/features/channel_example/method_channel_screen.dart';
 import 'package:state_manage/features/get_controller_example/bingdings/get_bingding.dart';
 import 'package:state_manage/features/get_controller_example/get_controller_screen.dart';
@@ -27,6 +28,7 @@ class AppRoute {
   static const String getControllerScreen = '/getControllerScreen';
   static const String sensorExampleScreen = '/sensorExampleScreen';
   static const String socketIoScreen = '/socketIoScreen';
+  static const String anchorWidgetExapleScreen = '/anchorWidgetExapleScreen';
 
   static List<GetPage> generateRouteGet() {
     return [
@@ -56,6 +58,11 @@ class AppRoute {
         page: () => SocketIoScreen.init(),
         transition: Transition.rightToLeft,
       ),
+      GetPage(
+        name: anchorWidgetExapleScreen,
+        page: () => const AnchorWidgetExapleScreen(),
+        transition: Transition.rightToLeft,
+      ),
     ];
   }
 
@@ -66,26 +73,4 @@ class AppRoute {
         ),
         transition: Transition.rightToLeftWithFade,
       );
-  //
-  // static Route<dynamic> generateRoute(RouteSettings settings) {
-  //   switch (settings.name) {
-  //     case riverPodScreen:
-  //       return PageViewTransition(
-  //           child: const RiverpodScreen(), settings: settings);
-  //     case methodChannelScreen:
-  //       return PageViewTransition(
-  //           child: const MethodChannelScreen(), settings: settings);
-  //     case getControllerScreen:
-  //       return PageViewTransition(
-  //           child: GetControllerScreen.init(), settings: settings);
-
-  //     default:
-  //       return PageViewTransition(
-  //         child: Scaffold(
-  //           body: Center(child: Text('No route defined for ${settings.name}')),
-  //         ),
-  //         settings: settings,
-  //       );
-  //   }
-  // }
 }

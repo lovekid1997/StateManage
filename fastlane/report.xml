@@ -5,47 +5,47 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="0: prompt" time="5.3976024">
+      <testcase classname="fastlane.lanes" name="0: prompt" time="1.3331535">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="1: Switch to android setup_build lane" time="0.002539">
+      <testcase classname="fastlane.lanes" name="1: Switch to android setup_build lane" time="0.0031245">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="2: flutter clean" time="4.1699777">
+      <testcase classname="fastlane.lanes" name="2: flutter clean" time="4.1795777">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="3: flutter pub get" time="7.1729832">
+      <testcase classname="fastlane.lanes" name="3: flutter pub get" time="5.1796641">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="4: flutter pub run build_runner build --delete-conflicting-outputs" time="68.2828361">
+      <testcase classname="fastlane.lanes" name="4: flutter pub run build_runner build --delete-conflicting-outputs" time="77.712549">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="5: Switch to android build_release_no_shrink lane" time="0.0022007">
+      <testcase classname="fastlane.lanes" name="5: Switch to android build_release_no_shrink lane" time="0.0021052">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="6: flutter build apk --no-shrink" time="128.3844162">
+      <testcase classname="fastlane.lanes" name="6: flutter build apk --no-shrink" time="150.7436879">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="7: Switch to android upload_firebase lane" time="0.0016517">
+      <testcase classname="fastlane.lanes" name="7: Switch to android upload_firebase lane" time="0.0024425">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="8: firebase_app_distribution" time="32.132124">
+      <testcase classname="fastlane.lanes" name="8: firebase_app_distribution" time="26.1341453">
         
       </testcase>
     
