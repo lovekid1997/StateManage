@@ -25,6 +25,7 @@ dependencies:
   flutter_riverpod: ^0.14.0+3
   hooks_riverpod: ^0.14.0+4
   flutter_hooks: ^0.17.0
+  flutter_bloc: ^7.0.1
   
   #support material
   get: ^4.1.4
@@ -42,6 +43,19 @@ dependencies:
 
   #equatable
   equatable: ^2.0.3
+
+  #sensor
+  sensors_plus: ^1.0.2
+  
+  #animation
+  animations: ^2.0.1
+  
+  #socket io
+  socket_io_client: ^1.0.1
+
+  #rx dart
+  rxdart: ^0.27.1
+  
 
 dev_dependencies:
   flutter_test:

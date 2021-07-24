@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:get/get.dart';
@@ -63,15 +62,15 @@ class ListItemGet extends StatelessWidget {
               builder: (controller) {
                 final bool isLoadMore =
                     controller.state?.data.isLoadMore ?? false;
-                return isLoadMore
-                    ? const SizedBox(
-                        width: double.infinity,
-                        height: 45,
-                        child: Center(
-                          child: CircularProgressIndicator(),
-                        ),
-                      )
-                    : const SizedBox.shrink();
+                return SizedBox(
+                  width: double.infinity,
+                  height: 45,
+                  child: Center(
+                    child: isLoadMore
+                        ? const CircularProgressIndicator()
+                        : const SizedBox.shrink(),
+                  ),
+                );
               },
             );
           }

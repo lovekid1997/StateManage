@@ -5,6 +5,8 @@ import 'package:state_manage/features/channel_example/method_channel_screen.dart
 import 'package:state_manage/features/get_controller_example/bingdings/get_bingding.dart';
 import 'package:state_manage/features/get_controller_example/get_controller_screen.dart';
 import 'package:state_manage/features/riverpod_example/riverpod_screen.dart';
+import 'package:state_manage/features/sensor/sensor_example_screen.dart';
+import 'package:state_manage/features/socket_io/socket_io_screen.dart';
 
 class PageViewTransition extends PageTransition {
   PageViewTransition({
@@ -23,6 +25,8 @@ class AppRoute {
   static const String riverPodScreen = '/riverpodScreen';
   static const String methodChannelScreen = '/methodChannelScreen';
   static const String getControllerScreen = '/getControllerScreen';
+  static const String sensorExampleScreen = '/sensorExampleScreen';
+  static const String socketIoScreen = '/socketIoScreen';
 
   static List<GetPage> generateRouteGet() {
     return [
@@ -41,6 +45,16 @@ class AppRoute {
         page: () => GetControllerScreen.init(),
         transition: Transition.rightToLeft,
         binding: GetBingding(),
+      ),
+      GetPage(
+        name: sensorExampleScreen,
+        page: () => const SensorExampleScreen(),
+        transition: Transition.rightToLeft,
+      ),
+      GetPage(
+        name: socketIoScreen,
+        page: () => SocketIoScreen.init(),
+        transition: Transition.rightToLeft,
       ),
     ];
   }
