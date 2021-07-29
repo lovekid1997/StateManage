@@ -6,14 +6,15 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:get/get.dart' as getpackage;
 import 'package:rxdart/rxdart.dart';
 import 'package:socket_io_client/socket_io_client.dart' as io;
-import 'package:state_manage/common/handle_common.dart';
-import 'package:state_manage/features/socket_io/widgets/dialog_room_widget.dart';
-import 'package:state_manage/model/chat/join_room_request.dart';
-import 'package:state_manage/model/chat/message.dart';
 
+import '../../../common/handle_common.dart';
+import '../../../model/chat/join_room_request.dart';
+import '../../../model/chat/message.dart';
+import '../widgets/dialog_room_widget.dart';
+
+part 'socket_bloc.freezed.dart';
 part 'socket_event.dart';
 part 'socket_state.dart';
-part 'socket_bloc.freezed.dart';
 
 const String keyJoinRoomAlert = 'join_room_alert';
 const String keyJoinRoom = 'joinRoom';

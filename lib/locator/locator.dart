@@ -1,7 +1,8 @@
 import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
 import 'package:stacked_services/stacked_services.dart';
-import 'package:state_manage/locator/locator.config.dart';
+
+import 'locator.config.dart';
 
 final getIt = GetIt.instance;
 

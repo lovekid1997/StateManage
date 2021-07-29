@@ -1,5 +1,5 @@
 import 'package:stacked_services/stacked_services.dart';
-import 'package:state_manage/locator/locator.dart';
+import '../locator/locator.dart';
 
 mixin HandleCommon {
   final DialogService _dialogService = getIt<DialogService>();

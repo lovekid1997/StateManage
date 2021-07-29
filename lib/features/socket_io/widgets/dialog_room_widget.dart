@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 
-import 'package:state_manage/model/chat/join_room_request.dart';
+import '../../../model/chat/join_room_request.dart';
 
 class DialogRoomWidget extends HookWidget {
   const DialogRoomWidget({Key? key}) : super(key: key);

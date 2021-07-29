@@ -3,11 +3,12 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:state_manage/features/socket_io/bloc/socket_bloc.dart';
-import 'package:state_manage/features/socket_io/widgets/alert_user_widget.dart';
-import 'package:state_manage/features/socket_io/widgets/message_widget.dart';
-import 'package:state_manage/features/socket_io/widgets/send_message_widget.dart';
-import 'package:state_manage/model/chat/message.dart';
+
+import '../../model/chat/message.dart';
+import 'bloc/socket_bloc.dart';
+import 'widgets/alert_user_widget.dart';
+import 'widgets/message_widget.dart';
+import 'widgets/send_message_widget.dart';
 
 class SocketIoScreen extends HookWidget {
   const SocketIoScreen({Key? key}) : super(key: key);

@@ -3,11 +3,12 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:get/get.dart';
-import 'package:state_manage/features/get_controller_example/controller/get_controlle.dart';
-import 'package:state_manage/features/get_controller_example/widgets/counter_test_widget.dart';
-import 'package:state_manage/features/get_controller_example/widgets/obs_widget.dart';
-import 'package:state_manage/features/get_controller_example/widgets/state_widget.dart';
-import 'package:state_manage/features/get_controller_example/widgets/state_with_freezed_widget.dart';
+
+import 'controller/get_controlle.dart';
+import 'widgets/counter_test_widget.dart';
+import 'widgets/obs_widget.dart';
+import 'widgets/state_widget.dart';
+import 'widgets/state_with_freezed_widget.dart';
 
 class GetControllerScreen extends HookWidget {
   static GetControllerScreen init({Key? key}) {

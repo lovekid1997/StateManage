@@ -1,9 +1,10 @@
 import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
-import 'package:state_manage/common/config.dart';
-import 'package:state_manage/model/page/pagetination_model.dart';
-import 'package:state_manage/model/user/user_response.dart';
-import 'package:state_manage/rest_client/rest_client.dart';
+
+import '../common/config.dart';
+import '../model/page/pagetination_model.dart';
+import '../model/user/user_response.dart';
+import '../rest_client/rest_client.dart';
 
 @lazySingleton
 class DataRepository implements RestClient {

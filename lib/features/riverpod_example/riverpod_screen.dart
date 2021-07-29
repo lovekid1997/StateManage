@@ -1,8 +1,8 @@
 import 'dart:developer';
 import 'package:flutter/material.dart';
-import 'package:state_manage/features/riverpod_example/riverpod_widgets/riverpod_freezed/riverpod_frezzed_widget.dart';
-import 'package:state_manage/features/riverpod_example/riverpod_widgets/riverpod_freezed_hook_widget.dart/riverpod_freezed_hook_widget.dart';
-import 'package:state_manage/features/riverpod_example/riverpod_widgets/riverpod_not_freezed/riverpod_not_freezed_widget.dart';
+import 'riverpod_widgets/riverpod_freezed/riverpod_frezzed_widget.dart';
+import 'riverpod_widgets/riverpod_freezed_hook_widget.dart/riverpod_freezed_hook_widget.dart';
+import 'riverpod_widgets/riverpod_not_freezed/riverpod_not_freezed_widget.dart';
 
 class RiverpodScreen extends StatefulWidget {
   const RiverpodScreen({Key? key}) : super(key: key);

@@ -1,7 +1,7 @@
 import 'dart:developer';
 
 import 'package:get/get.dart';
-import 'package:state_manage/features/get_controller_example/state/get_state.dart';
+import '../state/get_state.dart';
 
 class GetController extends GetxController with StateMixin<GetState> {
   static GetController get to => Get.find();

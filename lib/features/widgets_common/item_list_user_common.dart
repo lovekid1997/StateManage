@@ -2,13 +2,12 @@ import 'dart:developer';
 
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:state_manage/model/user/user_response.dart';
+import '../../model/user/user_response.dart';
 
 class ItemListUserCommon extends StatelessWidget {
   final DataUser item;
   final Function onTap;
-  const ItemListUserCommon(
-      {Key? key, required this.item, required this.onTap})
+  const ItemListUserCommon({Key? key, required this.item, required this.onTap})
       : super(key: key);
 
   @override
@@ -19,7 +18,10 @@ class ItemListUserCommon extends StatelessWidget {
         backgroundImage: CachedNetworkImageProvider(item.avatar ?? ''),
       ),
       title: Text('${item.lastName ?? ''} ${item.firstName ?? ''}'),
-      subtitle: Text(item.job ?? ''),
+      subtitle: Text(
+        item.job ?? '',
+        style: const TextStyle(color: Colors.white),
+      ),
       trailing: (item.like ?? false)
           ? const Icon(
               Icons.favorite,

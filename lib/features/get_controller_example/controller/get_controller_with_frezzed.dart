@@ -1,10 +1,11 @@
 import 'dart:developer';
 
 import 'package:get/get.dart';
-import 'package:state_manage/data_repository/user_repository/user_repository.dart';
-import 'package:state_manage/features/get_controller_example/state/get_state_with_freezed.dart';
-import 'package:state_manage/model/page/pagetination_model.dart';
-import 'package:state_manage/model/user/user_response.dart';
+
+import '../../../data_repository/user_repository/user_repository.dart';
+import '../../../model/page/pagetination_model.dart';
+import '../../../model/user/user_response.dart';
+import '../state/get_state_with_freezed.dart';
 
 class GetControllerFreezed extends GetxController
     with StateMixin<GetStateWithFreezed>, ScrollMixin {

@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:state_manage/model/user/user_response.dart';
+import '../../../model/user/user_response.dart';
 part 'get_state_with_freezed.freezed.dart';
 
 @freezed

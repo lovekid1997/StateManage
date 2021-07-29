@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 
 class AnchorWidgetExapleScreen extends StatefulWidget {
@@ -98,16 +96,15 @@ class AccountSliverAppBar extends SliverPersistentHeaderDelegate {
                 child: const Text('test button'),
               ),
             ),
-          ]..addAll(
-              List.generate(
-                30,
-                (index) => const SizedBox(
-                  width: double.infinity,
-                  height: 50,
-                  child: Text('test'),
-                ),
+            ...List.generate(
+              30,
+              (index) => const SizedBox(
+                width: double.infinity,
+                height: 50,
+                child: Text('test'),
               ),
             ),
+          ],
         ),
       ),
     );

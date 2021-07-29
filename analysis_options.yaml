@@ -10,3 +10,6 @@ linter:
 analyzer:
   strong-mode:
     implicit-casts: true
+  exclude:
+    - "lib/features/inner_drawer_example/inner_drawer_custom.dart"
+    - "lib/features/inner_drawer_example/inner_drawer_example_screen.dart"

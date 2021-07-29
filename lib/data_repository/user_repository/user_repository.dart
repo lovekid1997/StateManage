@@ -1,7 +1,7 @@
-import 'package:state_manage/data_repository/data_repository.dart';
-import 'package:state_manage/locator/locator.dart';
-import 'package:state_manage/model/page/pagetination_model.dart';
-import 'package:state_manage/model/user/user_response.dart';
+import '../../locator/locator.dart';
+import '../../model/page/pagetination_model.dart';
+import '../../model/user/user_response.dart';
+import '../data_repository.dart';
 
 abstract class UserMethod {
   Future<UserResponse?> fetchUser({PagtinationModel? pagtinationModel});

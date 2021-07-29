@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:state_manage/model/chat/message.dart';
+import '../../../model/chat/message.dart';
 
 class MessageWidget extends StatelessWidget {
   final Message item;
@@ -23,7 +23,7 @@ class MessageWidget extends StatelessWidget {
           style: const TextStyle(
             fontSize: 18,
             fontWeight: FontWeight.w400,
-            color: Colors.black,
+            color: Colors.white,
           ),
         ),
         const SizedBox(height: 4),
@@ -32,7 +32,7 @@ class MessageWidget extends StatelessWidget {
           style: const TextStyle(
             fontSize: 12,
             fontWeight: FontWeight.bold,
-            color: Colors.black,
+            color: Colors.white,
           ),
         ),
         Text(
@@ -40,7 +40,7 @@ class MessageWidget extends StatelessWidget {
           style: const TextStyle(
             fontSize: 12,
             fontWeight: FontWeight.w400,
-            color: Colors.black,
+            color: Colors.white,
           ),
         ),
       ],

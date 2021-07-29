@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:state_manage/model/user/user_response.dart';
+import '../../../model/user/user_response.dart';
 
 class RiverPodState extends Equatable {
   final List<DataUser>? listUsers;

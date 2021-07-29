@@ -30,14 +30,15 @@ class SendMessageWidget extends StatelessWidget {
             child: TextField(
               controller: controller,
               decoration: const InputDecoration(
-                hintText: 'Enter message',
-              ),
+                  hintText: 'Enter message',
+                  hintStyle: TextStyle(color: Colors.black)),
             ),
           ),
           IconButton(
             onPressed: () => onSendMessage(),
             icon: const Icon(
               Icons.send,
+              color: Colors.black,
             ),
           ),
         ],

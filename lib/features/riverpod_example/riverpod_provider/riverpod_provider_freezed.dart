@@ -1,9 +1,11 @@
 import 'dart:async';
+
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:state_manage/data_repository/user_repository/user_repository.dart';
-import 'package:state_manage/features/riverpod_example/riverpod_state/riverpod_freezed.dart';
-import 'package:state_manage/model/page/pagetination_model.dart';
-import 'package:state_manage/model/user/user_response.dart';
+
+import '../../../data_repository/user_repository/user_repository.dart';
+import '../../../model/page/pagetination_model.dart';
+import '../../../model/user/user_response.dart';
+import '../riverpod_state/riverpod_freezed.dart';
 
 final riverPodNotifierProviderFrezzed = StateNotifierProvider.autoDispose<
     RiverPodStateNotifierFrezzed, RiverPodStateFrezzed>((ref) {

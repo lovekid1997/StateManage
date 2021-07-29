@@ -1,8 +1,9 @@
-import 'package:retrofit/retrofit.dart';
 import 'package:dio/dio.dart';
-import 'package:state_manage/common/config.dart';
-import 'package:state_manage/model/page/pagetination_model.dart';
-import 'package:state_manage/model/user/user_response.dart';
+import 'package:retrofit/retrofit.dart';
+
+import '../common/config.dart';
+import '../model/page/pagetination_model.dart';
+import '../model/user/user_response.dart';
 
 part 'rest_client.g.dart';
 

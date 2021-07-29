@@ -2,7 +2,7 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:state_manage/features/get_controller_example/controller/get_controlle.dart';
+import '../controller/get_controlle.dart';
 
 class CounterTestWidget extends StatelessWidget {
   @override

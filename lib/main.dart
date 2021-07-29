@@ -1,13 +1,21 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:responsive_framework/responsive_framework.dart';
 import 'package:stacked_services/stacked_services.dart';
-import 'package:state_manage/locator/locator.dart';
-import 'package:state_manage/routes.dart';
+import 'package:url_strategy/url_strategy.dart';
+
+import 'features_web/const/const_web.dart';
+import 'locator/locator.dart';
+import 'routes.dart';
 
 Future<void> main() async {
   await configureDependencies();
 
+  //
+  setPathUrlStrategy();
   //river pod
   runApp(const ProviderScope(child: MyApp()));
 }
@@ -20,56 +28,44 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Demo manage',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const MyHomePage(title: 'Demo state manage'),
-      // onGenerateRoute: AppRoute.generateRoute,
+      theme: buildTheme(context),
       navigatorKey: StackedService.navigatorKey,
       getPages: AppRoute.generateRouteGet(),
       unknownRoute: AppRoute().unknowRoute,
+      initialRoute: AppRoute.initialRoutes,
+      builder: (context, child) {
+        if (kIsWeb) {
+          return ResponsiveWrapper.builder(
+            child,
+            minWidth: 600,
+            defaultScale: false,
+            breakpoints: [
+              const ResponsiveBreakpoint.resize(480, name: MOBILE),
+              const ResponsiveBreakpoint.resize(800, name: TABLET),
+              const ResponsiveBreakpoint.resize(1000, name: DESKTOP),
+            ],
+          );
+        } else {
+          return child!;
+        }
+      },
     );
   }
-}
 
-class MyHomePage extends StatelessWidget {
-  final String title;
-
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(title),
-      ),
-      body: Column(
-        children: [
-          TextButton(
-            onPressed: () => Get.toNamed(AppRoute.riverPodScreen),
-            child: const Text('River pod'),
+  ThemeData buildTheme(BuildContext context) {
+    return ThemeData.dark().copyWith(
+      backgroundColor: bgColor,
+      canvasColor: bgColor,
+      textTheme: GoogleFonts.merriweatherTextTheme(Theme.of(context).textTheme)
+          .apply(
+            bodyColor: Colors.white,
+          )
+          .copyWith(
+            bodyText1: const TextStyle(color: bodyTextColor, fontSize: 15),
+            bodyText2: const TextStyle(color: bodyTextColor, fontSize: 15),
+            subtitle1: const TextStyle(color: colorWhite, fontSize: 17),
+            subtitle2: const TextStyle(color: colorWhite, fontSize: 15),
           ),
-          TextButton(
-            onPressed: () => Get.toNamed(AppRoute.methodChannelScreen),
-            child: const Text('Channel Method'),
-          ),
-          TextButton(
-            onPressed: () => Get.toNamed(AppRoute.getControllerScreen),
-            child: const Text('Get controller'),
-          ),
-          TextButton(
-            onPressed: () => Get.toNamed(AppRoute.sensorExampleScreen),
-            child: const Text('Sensor example'),
-          ),
-          TextButton(
-            onPressed: () => Get.toNamed(AppRoute.socketIoScreen),
-            child: const Text('Socket io example'),
-          ),
-          TextButton(
-            onPressed: () => Get.toNamed(AppRoute.anchorWidgetExapleScreen),
-            child: const Text('Anchor Widget Example'),
-          ),
-        ],
-      ),
     );
   }
 }

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:get/get.dart';
-import 'package:state_manage/features/get_controller_example/controller/get_controller_with_frezzed.dart';
-import 'package:state_manage/features/get_controller_example/state/get_state_with_freezed.dart';
-import 'package:state_manage/features/widgets_common/item_list_user_common.dart';
-import 'package:state_manage/model/user/user_response.dart';
+
+import '../../../model/user/user_response.dart';
+import '../../widgets_common/item_list_user_common.dart';
+import '../controller/get_controller_with_frezzed.dart';
+import '../state/get_state_with_freezed.dart';
 
 class StateWithFreezedWidget extends HookWidget {
   @override
