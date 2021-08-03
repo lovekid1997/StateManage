@@ -44,6 +44,10 @@ class MyHomePage extends StatelessWidget {
             onPressed: () => Get.toNamed(AppRoute.innerDrawerExample),
             child: const Text('Inner Drawer Example'),
           ),
+          TextButton(
+            onPressed: () => Get.toNamed(AppRoute.notificationScreen),
+            child: const Text('NotificationScreen Example'),
+          ),
         ],
       ),
     );

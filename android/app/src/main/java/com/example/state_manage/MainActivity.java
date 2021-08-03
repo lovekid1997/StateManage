@@ -1,11 +1,7 @@
 package com.example.state_manage;
 
-import android.app.Activity;
 import android.os.Bundle;
-import android.os.CountDownTimer;
 import android.os.Handler;
-import android.os.Looper;
-import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -17,8 +13,6 @@ import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
 
 import io.flutter.embedding.android.FlutterActivity;
 import io.flutter.embedding.engine.FlutterEngine;
@@ -26,14 +20,11 @@ import io.flutter.plugin.common.BasicMessageChannel;
 import io.flutter.plugin.common.EventChannel;
 import io.flutter.plugin.common.JSONMessageCodec;
 import io.flutter.plugin.common.MethodChannel;
+import io.flutter.plugin.common.PluginRegistry;
 import io.flutter.plugins.GeneratedPluginRegistrant;
-
-import static java.util.concurrent.TimeUnit.SECONDS;
 
 
 public class MainActivity extends FlutterActivity {
-
-
     @Override
     public void configureFlutterEngine(@NonNull FlutterEngine flutterEngine) {
         super.configureFlutterEngine(flutterEngine);
@@ -134,5 +125,4 @@ public class MainActivity extends FlutterActivity {
             return getChannel;
         }
     }
-
 }

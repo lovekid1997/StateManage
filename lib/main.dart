@@ -1,3 +1,6 @@
+
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -9,12 +12,18 @@ import 'package:url_strategy/url_strategy.dart';
 
 import 'features_web/const/const_web.dart';
 import 'locator/locator.dart';
+import 'notification_service/notification_service.dart';
 import 'routes.dart';
 
-Future<void> main() async {
-  await configureDependencies();
 
-  //
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  //firebase
+  await Firebase.initializeApp();
+  //get it
+  await configureDependencies();
+  FirebaseMessaging.onBackgroundMessage(firebaseMessagingBackgroundHandler);
+  //hash url web
   setPathUrlStrategy();
   //river pod
   runApp(const ProviderScope(child: MyApp()));

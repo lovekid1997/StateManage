@@ -10,6 +10,7 @@ import 'features/channel_example/method_channel_screen.dart';
 import 'features/get_controller_example/bingdings/get_bingding.dart';
 import 'features/get_controller_example/get_controller_screen.dart';
 import 'features/inner_drawer_example/inner_drawer_example_screen.dart';
+import 'features/notification_example.dart/notification_screen.dart';
 import 'features/riverpod_example/riverpod_screen.dart';
 import 'features/sensor/sensor_example_screen.dart';
 import 'features/socket_io/socket_io_screen.dart';
@@ -43,6 +44,7 @@ class AppRoute {
   static const String socketIoScreen = '/socketIoScreen';
   static const String anchorWidgetExapleScreen = '/anchorWidgetExapleScreen';
   static const String innerDrawerExample = '/innerDrawerExample';
+  static const String notificationScreen = '/notificationScreen';
 
   static List<GetPage> generateRouteGet() {
     switch (kIsWeb) {
@@ -95,6 +97,11 @@ class AppRoute {
           GetPage(
             name: innerDrawerExample,
             page: () => const InnerDrawerExample(),
+            transition: Transition.rightToLeft,
+          ),
+          GetPage(
+            name: notificationScreen,
+            page: () => const NotificationScreen(),
             transition: Transition.rightToLeft,
           ),
         ];

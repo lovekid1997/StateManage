@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'features_web/const/const_web.dart';
 import 'features_web/side_menu/side_menu.dart';
-import 'features_web/side_menu/widgets/avatar_widget.dart';
 
 class AppWebMain extends StatelessWidget {
   const AppWebMain({Key? key}) : super(key: key);

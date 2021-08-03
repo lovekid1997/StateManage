@@ -12,6 +12,11 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
+  #firebase
+  firebase_messaging: ^10.0.4
+  firebase_core: ^1.4.0
+  flutter_local_notifications: ^8.0.0
+  
   #date time support
   intl: ^0.17.0
 
