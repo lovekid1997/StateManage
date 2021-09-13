@@ -1,11 +1,12 @@
 import 'dart:developer';
 
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:state_manage/features/riverpod_example/riverpod_provider/riverpod_provider_not_frezzed.dart';
-import 'package:state_manage/features/riverpod_example/riverpod_state/riverpod_state_not_freezed.dart';
-import 'package:state_manage/features/riverpod_example/riverpod_widgets/riverpod_not_freezed/riverpod_item_list_widget.dart';
-import 'package:state_manage/model/user/user_response.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+import '../../../../model/user/user_response.dart';
+import '../../../widgets_common/item_list_user_common.dart';
+import '../../riverpod_provider/riverpod_provider_not_frezzed.dart';
+import '../../riverpod_state/riverpod_state_not_freezed.dart';
 
 class RiverPodNotFrezzedWidget extends StatefulWidget {
   const RiverPodNotFrezzedWidget();
@@ -57,7 +58,7 @@ class _RiverPodNotFrezzedWidgetState extends State<RiverPodNotFrezzedWidget>
                     child: Center(child: CircularProgressIndicator()));
               }
               final DataUser item = listUser[index];
-              return RiverPodItemListWidget(
+              return ItemListUserCommon(
                 item: item,
                 onTap: () {
                   context

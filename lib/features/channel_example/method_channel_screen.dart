@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:state_manage/pigeon/pigeon_generate.dart';
+import '../../pigeon/pigeon_generate.dart';
 
 const String methodChannelName = 'com.test.channel/method';
 const String basicMessageChannel = 'com.test.channel/basicMessageChannel';

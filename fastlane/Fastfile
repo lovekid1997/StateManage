@@ -1,0 +1,48 @@
+
+
+#apk profile path build\app\outputs\flutter-apk\app-profile.apk
+
+lane :setup_build do 
+    sh('flutter clean')
+    sh('flutter pub get')
+    sh('flutter pub run build_runner build --delete-conflicting-outputs')
+end
+
+platform :android do
+  
+    desc "Build Android apk --no-shrink"
+    lane :build_release_no_shrink do
+      sh('flutter build apk --no-shrink')
+    end
+    desc "Build Android apk --profile"
+
+    lane :build_profilee do
+      sh('flutter clean')
+      sh('flutter pub get')
+      sh('flutter pub run build_runner build --delete-conflicting-output')
+      sh('flutter build apk --profile')
+    end
+
+    desc "Upload apk available to Firebase App Distribution"
+    lane :upload_firebase do
+        firebase_app_distribution(
+                                app: ENV['FIREBASE_APP_ID'],
+                                apk_path: "build/app/outputs/apk/release/app-release.apk",
+                                #service_credentials_file: ENV['FIR_JSON_KEY_FILE'],
+                                groups: ENV['FIREBASE_GROUP_NAME'],
+                                release_notes_file: ENV['FIR_RELEASE_NOTE_FILE'],
+                                firebase_cli_token: ENV['FIREBASE_TOKEN'],
+                            )
+    end
+
+    desc "Deploy apk to Firebase App Distribution"
+    lane :deploy_firebase do |options|
+      name = UI.input("What's your name? ")
+      changelog = prompt(text: "#{name} Do you want to set up before you build?: ",boolean: true)
+      if changelog
+      setup_build
+      end
+      build_release_no_shrink
+      upload_firebase
+    end
+end  

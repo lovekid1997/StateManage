@@ -12,6 +12,8 @@ class PagtinationModel {
 
   int? limit;
   int? page;
+  PagtinationModel copyWith({int? limit, int? page}) =>
+      PagtinationModel(limit: limit ?? this.limit, page: page ?? this.page);
 
   factory PagtinationModel.fromRawJson(String str) =>
       PagtinationModel.fromJson(json.decode(str));

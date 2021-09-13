@@ -1,7 +1,9 @@
 import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
 import 'package:stacked_services/stacked_services.dart';
-import 'package:state_manage/locator/locator.config.dart';
+import 'package:state_manage/notification_service/notification_service.dart';
+
+import 'locator.config.dart';
 
 final getIt = GetIt.instance;
 
@@ -22,4 +24,11 @@ abstract class ThirdPartyServicesModule {
   SnackbarService get snackBarService;
   @lazySingleton
   BottomSheetService get bottomSheetService;
+}
+
+@module
+abstract class RegisterModule {
+  @preResolve
+  Future<NotificationService> get notificationService =>
+      NotificationService.init();
 }

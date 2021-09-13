@@ -12,11 +12,17 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
+  #firebase
+  firebase_messaging: ^10.0.4
+  firebase_core: ^1.4.0
+  flutter_local_notifications: ^8.0.0
+  
   #date time support
-  intl: ^0.17.0 
+  intl: ^0.17.0
+
   #pigeon
   pigeon: ^0.3.0
-  
+
   #UI support
   cached_network_image: ^3.0.0
 
@@ -24,7 +30,8 @@ dependencies:
   flutter_riverpod: ^0.14.0+3
   hooks_riverpod: ^0.14.0+4
   flutter_hooks: ^0.17.0
-  
+  flutter_bloc: ^7.0.1
+
   #support material
   get: ^4.1.4
   stacked_services: ^0.8.10
@@ -42,6 +49,33 @@ dependencies:
   #equatable
   equatable: ^2.0.3
 
+  #sensor
+  sensors_plus: ^1.0.2
+
+  #animation
+  animations: ^2.0.1
+
+  #socket io
+  socket_io_client: ^1.0.1
+
+  #rx dart
+  rxdart: ^0.27.1
+
+  #url_strategy
+  url_strategy: ^0.2.0
+
+  #goolge font
+  google_fonts: ^2.1.0
+
+  #responsive web
+  responsive_framework: ^0.1.4
+
+  #inner drawer
+  flutter_inner_drawer: ^1.0.0+1
+
+  #toggle
+  toggle_switch: ^1.2.0
+  
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -53,3 +87,6 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/icons/

@@ -9,14 +9,16 @@ import 'package:injectable/injectable.dart' as _i2;
 import 'package:stacked_services/stacked_services.dart' as _i3;
 
 import '../data_repository/data_repository.dart' as _i4;
-import 'locator.dart' as _i5; // ignore_for_file: unnecessary_lambdas
+import '../notification_service/notification_service.dart' as _i5;
+import 'locator.dart' as _i6; // ignore_for_file: unnecessary_lambdas
 
 // ignore_for_file: lines_longer_than_80_chars
 /// initializes the registration of provided dependencies inside of [GetIt]
-_i1.GetIt $initGetIt(_i1.GetIt get,
-    {String? environment, _i2.EnvironmentFilter? environmentFilter}) {
+Future<_i1.GetIt> $initGetIt(_i1.GetIt get,
+    {String? environment, _i2.EnvironmentFilter? environmentFilter}) async {
   final gh = _i2.GetItHelper(get, environment, environmentFilter);
   final thirdPartyServicesModule = _$ThirdPartyServicesModule();
+  final registerModule = _$RegisterModule();
   gh.lazySingleton<_i3.BottomSheetService>(
       () => thirdPartyServicesModule.bottomSheetService);
   gh.lazySingleton<_i4.DataRepository>(() => _i4.DataRepository());
@@ -24,12 +26,15 @@ _i1.GetIt $initGetIt(_i1.GetIt get,
       () => thirdPartyServicesModule.dialogService);
   gh.lazySingleton<_i3.NavigationService>(
       () => thirdPartyServicesModule.navigationService);
+  await gh.factoryAsync<_i5.NotificationService>(
+      () => registerModule.notificationService,
+      preResolve: true);
   gh.lazySingleton<_i3.SnackbarService>(
       () => thirdPartyServicesModule.snackBarService);
   return get;
 }
 
-class _$ThirdPartyServicesModule extends _i5.ThirdPartyServicesModule {
+class _$ThirdPartyServicesModule extends _i6.ThirdPartyServicesModule {
   @override
   _i3.BottomSheetService get bottomSheetService => _i3.BottomSheetService();
   @override
@@ -39,3 +44,5 @@ class _$ThirdPartyServicesModule extends _i5.ThirdPartyServicesModule {
   @override
   _i3.SnackbarService get snackBarService => _i3.SnackbarService();
 }
+
+class _$RegisterModule extends _i6.RegisterModule {}
